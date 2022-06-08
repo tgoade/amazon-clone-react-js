@@ -1,0 +1,26 @@
+.nav {
+    display: flex;
+    background-color: #131921;
+    color: #fff;
+}
+.nav__sprite {
+    background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global-2x-hm-dsk-reorg._CB405937547_.png);
+    background-size: 350px;
+}
+.nav__base_logo {
+    background-position: -10px -51px;   
+    width: 97px;
+    height: 30px;    
+}
+.nav__location {
+    display: flex;
+}
+.nav__location_pin {
+    background-position: -71px -378px;
+    width: 15px;
+    height: 18px;
+    margin-top: 8px;
+    display: flex;
+    left: 2px;
+    top: 8px;
+}
