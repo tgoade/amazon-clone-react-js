@@ -1,7 +1,14 @@
+@use '../styles/global.scss' as global;
+
 .nav {
     display: flex;
     background-color: #131921;
     color: #fff;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    line-height: 16px;
+    padding: 0 15px;
 }
 .nav__sprite {
     background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global-2x-hm-dsk-reorg._CB405937547_.png);
@@ -12,15 +19,129 @@
     width: 97px;
     height: 30px;    
 }
+.nav__shopping_basket {
+    background-position: -10px -340px;   
+    width: 38px;
+    height: 26px;  
+}
 .nav__location {
     display: flex;
+    margin-left: 2px;
+    margin-right: 2px;
+    &_pin { 
+        display: flex;  
+        align-items: flex-end;
+        padding-bottom: 3px;      
+    }
+    &_copy {
+        display: flex;
+        flex-direction: column;
+    }
 }
-.nav__location_pin {
-    background-position: -71px -378px;
-    width: 15px;
-    height: 18px;
-    margin-top: 8px;
+.nav__search{
+    @include global.font-black;
     display: flex;
-    left: 2px;
-    top: 8px;
+    flex: 1;
+    border-radius: 24px;
+    height: 60px;
+    padding: 10px 5px;   
+    &_dropdown {
+        position: relative;
+        background-color: #f3f3f3;
+        display: flex;
+        align-items: center;
+        width: 62px;
+        border-top: 1px solid rgb(118, 118, 118);
+        border-left: 1px solid rgb(118, 118, 118);
+        border-bottom: 1px solid rgb(118, 118, 118);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        & select {
+            position: absolute;
+            background-color: #f3f3f3;
+            width: 50px;
+            border-top: none;
+            border-bottom: none;
+            border-left: none;
+            border-right: 1px solid transparent;            
+            text-align: center;
+            outline: none;
+        }
+    }
+    &_fill {
+        width: 100%;
+        & input {
+            width: 100%;
+            height: 40px;
+            outline: none;
+        }
+    }
+    &_icon {
+        width: 45px;
+        height: 40px;
+        background-color: #F3A846;            
+        border-top: 1px solid rgb(118, 118, 118);
+        border-right: 1px solid rgb(118, 118, 118);
+        border-bottom: 1px solid rgb(118, 118, 118);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.nav__actions {
+    display: flex;
+    & a { 
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;  
+    }    
+    & .nav__cart {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        &_count {
+            position: absolute;
+            left: 18px;
+            top: 2px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #f08804;
+        }
+    }
+}
+.nav__module {
+    display: flex;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 2px;
+    border: 1px solid #131921;
+    border-radius: 2px;
+    &:hover {
+        border: 1px solid #fff;
+    }
+    &:first-child {
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 4px;
+        & img {
+            width: 24px;
+            height: auto;
+        }
+    }    
+}
+.nav__lineTwo {
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+}
+.nav__arrow_down {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #a7acb2;
+    padding-bottom: 3px;
+    margin-left: 5px;
 }

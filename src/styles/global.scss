@@ -33,11 +33,11 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  font-size: 20px;
+  font-size: 14px;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: mintcream;
 }
 
@@ -64,6 +64,5 @@ select {
 /********************************************/
 
 @mixin font-black($col: #0F1111){
-  background: $col;
-  border-radius: 5px;
+  color: $col;
 }
