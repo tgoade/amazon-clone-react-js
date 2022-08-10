@@ -1,7 +1,7 @@
 @use '../styles/global.scss' as global;
 
 .nav {
-    display: flex;
+    @include global.display-flex;
     background-color: #131921;
     color: #fff;
     justify-content: space-around;
@@ -25,30 +25,29 @@
     height: 26px;  
 }
 .nav__location {
-    display: flex;
+    @include global.display-flex;
     margin-left: 2px;
     margin-right: 2px;
     &_pin { 
-        display: flex;  
+        @include global.display-flex;
         align-items: flex-end;
         padding-bottom: 3px;      
     }
     &_copy {
-        display: flex;
-        flex-direction: column;
+        @include global.display-flex(column);
     }
 }
 .nav__search{
     @include global.font-black;
-    display: flex;
+    @include global.display-flex;    
     flex: 1;
     border-radius: 24px;
     height: 60px;
     padding: 10px 5px;   
     &_dropdown {
+        @include global.display-flex;
         position: relative;
         background-color: #f3f3f3;
-        display: flex;
         align-items: center;
         width: 62px;
         border-top: 1px solid rgb(118, 118, 118);
@@ -89,16 +88,14 @@
     }
 }
 .nav__actions {
-    display: flex;
+    @include global.display-flex;
     & a { 
+        @include global.display-flex(column);
         color: #fff;
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;  
+        text-decoration: none;        
     }    
     & .nav__cart {
-        display: flex;
-        flex-direction: row;
+        @include global.display-flex;
         align-items: flex-end;
         position: relative;
         &_count {
@@ -112,7 +109,7 @@
     }
 }
 .nav__module {
-    display: flex;
+    @include global.display-flex;
     padding-left: 9px;
     padding-right: 9px;
     padding-bottom: 2px;
@@ -122,7 +119,7 @@
         border: 1px solid #fff;
     }
     &:first-child {
-        display: flex;
+        @include global.display-flex;
         align-items: flex-end;
         padding-bottom: 4px;
         & img {
@@ -132,8 +129,8 @@
     }    
 }
 .nav__lineTwo {
+    @include global.display-flex;
     font-weight: 700;
-    display: flex;
     align-items: flex-end;
 }
 .nav__arrow_down {
