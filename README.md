@@ -1,3 +1,3 @@
 ## Live Demo
 
-[Amazon Clone](amazonclonesite.netlify.app) 
+[Amazon Clone](https://amazonclonesite.netlify.app) 
