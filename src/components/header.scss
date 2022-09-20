@@ -9,16 +9,16 @@
     height: 60px;
     line-height: 16px;
     padding: 0 15px;
+    .logo {    
+        width: 97px;
+        height: auto;    
+    }
 }
 .nav__sprite {
     background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/gno/sprites/nav-sprite-global-2x-hm-dsk-reorg._CB405937547_.png);
     background-size: 350px;
 }
-.nav__base_logo {
-    background-position: -10px -51px;   
-    width: 97px;
-    height: 30px;    
-}
+
 .nav__shopping_basket {
     background-position: -10px -340px;   
     width: 38px;
@@ -55,7 +55,7 @@
         border-bottom: 1px solid rgb(118, 118, 118);
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
-        & select {
+        select {
             position: absolute;
             background-color: #f3f3f3;
             width: 50px;
@@ -89,12 +89,12 @@
 }
 .nav__actions {
     @include global.display-flex;
-    & a { 
+    a { 
         @include global.display-flex(column);
         color: #fff;
         text-decoration: none;        
     }    
-    & .nav__cart {
+    .nav__cart {
         @include global.display-flex;
         align-items: flex-end;
         position: relative;
@@ -122,7 +122,7 @@
         @include global.display-flex;
         align-items: flex-end;
         padding-bottom: 4px;
-        & img {
+        img {
             width: 24px;
             height: auto;
         }

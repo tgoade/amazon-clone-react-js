@@ -2,7 +2,7 @@
 
 .deal__module {
     @include global.module;
-    & h2 {
+    h2 {
         margin-bottom: 10px;
     }
 }
@@ -12,8 +12,11 @@
 .grid-1-1 {
     @include global.display-grid;
 }
+.more {
+    align-self: end;
+}
 .more a {
     display: block;    
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 20px;    
 }

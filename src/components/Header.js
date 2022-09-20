@@ -6,9 +6,10 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 function Header() {
   return (
     <div className='nav'>
-      <div className='nav__sprite nav__base_logo'>
+      <a href='/'>
+          <img className='logo' src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' alt='' />       
+      </a>      
 
-      </div>
       <div className='nav__location nav__module'>
         <div className='nav__location_pin'>
           <LocationOnOutlinedIcon />
@@ -54,7 +55,7 @@ function Header() {
           </a>
         </div>
         <div className='nav__module'>
-          <a href="/" className='nav__cart'>
+          <a href='/checkout' className='nav__cart'>
             <div className='nav__cart_wrap'>
               <div className='nav__cart_count'>0</div>
               <div className='nav__sprite nav__shopping_basket'></div>
